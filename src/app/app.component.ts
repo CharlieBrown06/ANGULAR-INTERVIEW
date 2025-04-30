@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component,OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
 
+ 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone:true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [CommonModule]
 })
-export class AppComponent {
-  title = 'ANGULAR-INTERVIEW';
+export class AppComponent implements OnInit {
+  bookList$: Observable<string[]> = of(['📙', '📕', '📗', '📘']).pipe(delay(1000));
+  bookList: string[] = [];
+
+  ngOnInit() {
+    this.bookList$.subscribe((bookList) => {
+      this.bookList = bookList;
+    });
+  }
 }
