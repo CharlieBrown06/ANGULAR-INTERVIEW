@@ -1,0 +1,34 @@
+<div class="auth-card">
+  <h2 class="auth-title">Authentification</h2>
+  
+  <form (ngSubmit)="onSubmit()">
+    <app-form-field
+      label="Login"
+      placeholder="Entrez votre identifiant"
+      type="text"
+      icon="person"
+      [(ngModel)]="login"
+      name="login"
+      [required]="true">
+    </app-form-field>
+    
+    <app-form-field
+      label="Mot de passe"
+      placeholder="Entrez votre mot de passe"
+      type="password"
+      icon="lock"
+      [(ngModel)]="password"
+      name="password"
+      [required]="true">
+    </app-form-field>
+    
+    <div class="form-actions">
+      <app-button
+        label="Se connecter"
+        variant="primary"
+        [fullWidth]="true"
+        type="submit">
+      </app-button>
+    </div>
+  </form>
+</div>

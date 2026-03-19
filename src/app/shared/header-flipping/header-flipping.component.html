@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="left-section">
+    <button mat-flat-button 
+            [color]="authMockEnabled ? 'accent' : 'primary'"
+            (click)="toggleAuthMock()">
+      AUTH_MOCK
+    </button>
+    
+    <button mat-flat-button 
+            [color]="showTagsEnabled ? 'accent' : 'primary'"
+            (click)="toggleShowTags()">
+      SHOW_TAGS
+    </button>
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="right-section">
+    <button mat-icon-button (click)="onUserClick()" aria-label="User profile">
+      <mat-icon>person</mat-icon>
+    </button>
+    
+    <button mat-icon-button (click)="onLogout()" aria-label="Logout" color="warn">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
