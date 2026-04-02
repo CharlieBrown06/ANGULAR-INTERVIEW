@@ -1,6 +1,6 @@
 # JoliJob
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21 with Angular Material and atomic design architecture.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4 with Angular Material and atomic design architecture.
 
 ## Development server
 
